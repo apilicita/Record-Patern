@@ -6,9 +6,11 @@ public class App {
 	//utilizando la sentencia if y Pattern Matching con el metodo instanceof 
 	//y ademas destructure del tipo record que es uno de los record patterns
 	static void imprimeDetalles(Object obj) {
-		if (obj instanceof Book book) {
-			System.out.println("Titulo del libro: "+ book.title());
-			System.out.println("Autor del libro: "+ book.author());
+		
+		//En java 21 con record patern, especificamente con destructure
+		if (obj instanceof Book (String titulo,String autor)) {
+			System.out.println("Titulo del libro: "+ titulo);
+			System.out.println("Autor del libro: "+ autor);
 		}
 	}
 	
