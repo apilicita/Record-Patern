@@ -26,6 +26,25 @@ public class App {
     	
     	imprimeDetalles(libro);
     	
+    	/**
+    	 * Comentario para Javadoc
+    	 * 
+    	 * @author apilicita
+    	 * Pattern records tambien puede estar aninados
+    	 * */
+    	
+    	Library library = Library.builder()
+    			.name("Biblioteca de Mostoles")
+    			.bestSeller(Book.builder()
+    					.title("Java Programing")
+    					.author("Sebas Barranquilla")
+    					.build())
+    	       .build();
+    	
+    	
+    	if (library instanceof Library(String nombre,Book(String titulo, String author))) {
+    	  System.out.println("En la biblioteca:  " + nombre + " ,el bestSeller  es: " + titulo + " ,por el autor: "+author);	
+    	}
     	
     }
 }
